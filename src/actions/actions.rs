@@ -5,33 +5,13 @@
 * fix task date and maybe task type enums
 */
 
+use crate::types::errors::{ErrorType, SysErrorType, UsrErrorType};
+
 use actix_web::web::Json;
 use serde_json::json;
 use std::path::Path;
 
 use crate::types::{project::Project, tasks::Task};
-
-#[derive(Debug)]
-pub enum SysErrorType {
-    FileNotFound,
-    FileNotReadable,
-    FileNotWritable,
-    FileNotValid,
-}
-
-#[derive(Debug)]
-pub enum UsrErrorType {
-    InvalidInput,
-    InvalidProject,
-    InvalidTask,
-}
-
-#[derive(Debug)]
-pub enum ErrorType {
-    System(SysErrorType),
-    User(UsrErrorType),
-    Unknown,
-}
 
 #[derive(serde::Serialize, serde::Deserialize, Debug)]
 pub struct Test {

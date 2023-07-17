@@ -43,7 +43,6 @@ pub enum TaskType {
     Bug,
     Feature,
     Improvement,
-    Enhancement,
     Documentation,
     Refactor,
     Test,
