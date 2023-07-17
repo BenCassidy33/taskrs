@@ -19,7 +19,7 @@ async fn main() -> std::io::Result<()> {
         .await
 }
 
-#[get("/get/{project_id}")]
+#[get("/api/v1/project/{project_id}")]
 async fn get_project(project_id: web::Path<String>) -> impl Responder {
     let project = actions::actions::get_project_by_id(String::from(project_id.into_inner()));
 
