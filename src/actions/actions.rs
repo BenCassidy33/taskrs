@@ -6,11 +6,6 @@
 */
 
 use crate::types::errors::{ErrorType, SysErrorType, UsrErrorType};
-
-use actix_web::web::Json;
-use serde_json::json;
-use std::path::Path;
-
 use crate::types::{project::Project, tasks::Task};
 
 #[derive(serde::Serialize, serde::Deserialize, Debug)]
@@ -35,12 +30,5 @@ pub fn get_project_by_id(id: String) -> Result<Project, ErrorType> {
 }
 
 pub fn read_task() -> Task {
-    todo!()
-}
-
-pub fn seraialize_project() -> Json<Project> {
-    todo!()
-}
-pub fn seraialize_task() -> Json<Task> {
     todo!()
 }

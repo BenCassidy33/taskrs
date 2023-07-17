@@ -1,5 +1,3 @@
-#![allow(dead_code)]
-
 use crate::types::tasks::*;
 
 use serde::{Deserialize, Serialize};
