@@ -7,21 +7,21 @@ use std::ops::RangeInclusive;
 // type Percentage = RangeInclusive<f32>;
 // static VALID_PROGRESS_RANGE: Percentage = 0.0..=100.0;
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub enum TaskStatus {
     Todo,
     InProgress,
     Done,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub enum Priority {
     Low,
     Medium,
     High,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub enum ColorTag {
     Red,
     Orange,
@@ -32,17 +32,18 @@ pub enum ColorTag {
     Pink,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub enum DueType {
     Date(String),
     NotDue,
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub enum TaskType {
     Bug,
     Feature,
     Improvement,
+    Enhancement,
     Documentation,
     Refactor,
     Test,
@@ -50,7 +51,7 @@ pub enum TaskType {
     Custom(String),
 }
 
-#[derive(Serialize, Deserialize, Debug)]
+#[derive(Serialize, Deserialize, Debug, Clone)]
 pub struct Task {
     pub title: String,
     pub id: String,

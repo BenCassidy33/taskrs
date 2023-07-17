@@ -31,6 +31,6 @@ pub mod types;
 // }
 
 fn main() {
-    let project = crate::actions::actions::read_project("src/test.json");
-    println!("{:?}", project);
+    let project = crate::actions::actions::get_project_by_id(String::from("123456789"));
+    println!("{:#?}", project);
 }
